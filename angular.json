@@ -93,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/dist/css/bootstrap.css/boostrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.sass"
             ],
             "scripts": []
