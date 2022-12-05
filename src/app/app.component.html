@@ -1,3 +1,15 @@
+<ol>
+  <li>number 1</li>
+  <li>number 2</li>
+  <li>number 3</li>
+  <li>number 4</li>
+</ol>
+<hr/>
+<label>Username</label>
+<input type="text" class="form-control" [ngModel]="username"/>
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="username === ''" (click)="username = ''">Reset User</button>
 
-<app-server></app-server>
+
 <router-outlet></router-outlet>
+
