@@ -5,11 +5,12 @@
   <li>number 4</li>
 </ol>
 <hr/>
-<label>Username</label>
-<input type="text" class="form-control" [ngModel]="username"/>
-<p>{{ username }}</p>
-<button class="btn btn-primary" [disabled]="username === ''" (click)="username = ''">Reset User</button>
-
+<button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = true</p>
+<div *ngFor="let logItem of log; let logItemIndex = index"
+     [ngStyle]="{backgroundColor: logItemIndex >= 4 ? 'blue' :'transparent'}"
+     [ngClass]="{'white-text': logItemIndex >= 4}"
+>{{ logItem }}</div>
 
 <router-outlet></router-outlet>
 
